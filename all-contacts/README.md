@@ -3,7 +3,8 @@
 Order of execution
 
   1. Generate PDBs
-  1. Check if the generated PDBs are ok
+  1. Fix PDBs of duplicate structures
+  1. Check if the fixed PDBs are ok
   1. Generate CONs, which requires the PDBs
   1. Check if the generated CONs are ok
   1. Concatenate (join) the generated CONs into one `.con` file
@@ -63,6 +64,21 @@ Order of execution
     --logfile, -l <log_file>
         Path to an input logfile. When specified only check the PDBs whose
         project, run, clone, and time (ps) listed in the logfile.
+
+    -h, --help
+        Print this help message.
+```
+
+## `pdbs-fix.pl`
+
+```man
+    pdbs-check.pl -h
+
+    pdbs-check.pl <project_dir>
+
+    Run this script in the location of the F@H PROJ* directories. After
+    running, grep resulting log file (fix_FAH-PDBs_PROJ*.log) for "ERROR"
+    to look for bad or missing PDBs.
 
     -h, --help
         Print this help message.
