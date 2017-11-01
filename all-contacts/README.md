@@ -51,9 +51,9 @@ Order of execution
 ## `pdbs-fix.pl`
 
 ```man
-    pdbs-check.pl -h
+    pdbs-fix.pl -h
 
-    pdbs-check.pl <project_dir>
+    pdbs-fix.pl <project_dir>
 
     Run this script in the location of the F@H PROJ* directories. After
     running, grep resulting log file (fix_FAH-PDBs_PROJ*.log) for "ERROR"
